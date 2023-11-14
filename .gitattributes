@@ -1,2 +1,26 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+print("Welcome to my Guessing game!")
+print("Guess a number between 1 and 1,000,000. if it is too low or too high then i will indicate you to guess either higher or lower.") 
+print()
+
+import random
+myNumber = random.randint(1,1000000)
+attempt = 1
+
+while True: 
+  guess = int(input("Pick a number between 1 and 1,000,000: "))
+  if guess < myNumber:
+    print("too low.")
+    attempt += 1
+  elif guess > myNumber:
+    print("too high.")
+    attempt += 1
+    continue
+  elif guess == myNumber:
+    print("YES!!")
+    break 
+    exit()
+  else:
+    print("1 and one million remember.")
+print("It took you", attempt, "attempt(s) to get the correct answer.")
